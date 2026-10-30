@@ -1,15 +1,19 @@
 package com.example.practicalfive;
 
+import android.content.res.ColorStateList;
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 /**
  * Second screen. Shows the name, photograph and factual summary of the
- * municipality that was selected on the main screen.
+ * municipality that was selected on the main screen, styled with that
+ * municipality's colour.
  */
 public class Municipality extends AppCompatActivity {
 
@@ -25,9 +29,18 @@ public class Municipality extends AppCompatActivity {
             R.drawable.tianjin
     };
 
+    /** Named colour resource used for each municipality, in the same order. */
+    private static final int[] MUNICIPALITY_COLORS = {
+            R.color.municipality_beijing,
+            R.color.municipality_shanghai,
+            R.color.municipality_chongqing,
+            R.color.municipality_tianjin
+    };
+
     private final TextProcessor textProcessor = new TextProcessor();
 
     private String municipalityName;
+    private Button visitSiteButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +50,7 @@ public class Municipality extends AppCompatActivity {
         TextView nameView = findViewById(R.id.textViewMunicipalityName);
         TextView infoView = findViewById(R.id.textViewMunicipalityInfo);
         ImageView imageView = findViewById(R.id.imageViewMunicipality);
+        visitSiteButton = findViewById(R.id.buttonVisitSite);
 
         String rawName = getIntent().getStringExtra(EXTRA_MUNICIPALITY_NAME);
         String validatedName = textProcessor.processMunicipality(rawName);
@@ -57,5 +71,25 @@ public class Municipality extends AppCompatActivity {
         imageView.setContentDescription(
                 getString(R.string.content_description_municipality_photo, validatedName));
         infoView.setText(summaries[index]);
+
+        applyMunicipalityStyle(nameView, infoView, index);
+    }
+
+    /**
+     * Colours the second screen with the named colour of the displayed
+     * municipality. Light text is used on the coloured backgrounds so that the
+     * content stays readable.
+     */
+    private void applyMunicipalityStyle(TextView nameView, TextView infoView, int index) {
+        int municipalityColor = ContextCompat.getColor(this, MUNICIPALITY_COLORS[index]);
+        int lightTextColor = ContextCompat.getColor(this, R.color.color_text_light);
+
+        nameView.setBackgroundColor(municipalityColor);
+        nameView.setTextColor(lightTextColor);
+
+        infoView.setTextColor(municipalityColor);
+
+        visitSiteButton.setBackgroundTintList(ColorStateList.valueOf(municipalityColor));
+        visitSiteButton.setTextColor(lightTextColor);
     }
 }
