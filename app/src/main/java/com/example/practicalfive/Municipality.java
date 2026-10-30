@@ -1,6 +1,9 @@
 package com.example.practicalfive;
 
+import android.content.ActivityNotFoundException;
+import android.content.Intent;
 import android.content.res.ColorStateList;
+import android.net.Uri;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -13,7 +16,7 @@ import androidx.core.content.ContextCompat;
 /**
  * Second screen. Shows the name, photograph and factual summary of the
  * municipality that was selected on the main screen, styled with that
- * municipality's colour.
+ * municipality's colour. The Visit site button opens the official website.
  */
 public class Municipality extends AppCompatActivity {
 
@@ -35,6 +38,14 @@ public class Municipality extends AppCompatActivity {
             R.color.municipality_shanghai,
             R.color.municipality_chongqing,
             R.color.municipality_tianjin
+    };
+
+    /** Official English-language website of each municipality, in the same order. */
+    private static final String[] MUNICIPALITY_WEBSITES = {
+            "https://english.beijing.gov.cn/",
+            "https://english.shanghai.gov.cn/",
+            "https://english.cq.gov.cn/",
+            "https://en.tj.gov.cn/"
     };
 
     private final TextProcessor textProcessor = new TextProcessor();
@@ -73,6 +84,8 @@ public class Municipality extends AppCompatActivity {
         infoView.setText(summaries[index]);
 
         applyMunicipalityStyle(nameView, infoView, index);
+
+        visitSiteButton.setOnClickListener(view -> openOfficialWebsite());
     }
 
     /**
@@ -91,5 +104,26 @@ public class Municipality extends AppCompatActivity {
 
         visitSiteButton.setBackgroundTintList(ColorStateList.valueOf(municipalityColor));
         visitSiteButton.setTextColor(lightTextColor);
+    }
+
+    /**
+     * Opens the official website of the municipality that is currently
+     * displayed. An implicit {@link Intent#ACTION_VIEW} Intent lets Android
+     * choose a suitable application, normally the web browser.
+     */
+    private void openOfficialWebsite() {
+        int index = textProcessor.indexOfMunicipality(municipalityName);
+        if (index < 0) {
+            return;
+        }
+
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW,
+                Uri.parse(MUNICIPALITY_WEBSITES[index]));
+
+        try {
+            startActivity(browserIntent);
+        } catch (ActivityNotFoundException exception) {
+            Toast.makeText(this, R.string.error_no_browser, Toast.LENGTH_LONG).show();
+        }
     }
 }

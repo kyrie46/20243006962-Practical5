@@ -17,4 +17,7 @@
     <string name="button_visit_site">Visit site</string>
     <string name="content_description_municipality_photo">Photograph of %1$s</string>
     <string name="error_missing_municipality">No municipality was selected. Returning to the main screen.</string>
+
+    <!-- Implicit Intent -->
+    <string name="error_no_browser">No application is available to open this website.</string>
 </resources>
