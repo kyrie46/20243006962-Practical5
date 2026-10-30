@@ -11,4 +11,10 @@
     <!-- Input validation -->
     <string name="error_empty_input">Please enter a municipality name.</string>
     <string name="error_invalid_municipality">That municipality is not supported. Enter Beijing, Shanghai, Chongqing or Tianjin.</string>
+
+    <!-- Second screen -->
+    <string name="title_activity_municipality">Municipality</string>
+    <string name="button_visit_site">Visit site</string>
+    <string name="content_description_municipality_photo">Photograph of %1$s</string>
+    <string name="error_missing_municipality">No municipality was selected. Returning to the main screen.</string>
 </resources>

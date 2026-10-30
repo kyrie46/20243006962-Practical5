@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_default_background"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textViewMunicipalityName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/municipality_beijing"
+        android:gravity="center"
+        android:padding="24dp"
+        android:textColor="@color/color_text_light"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        tools:text="Beijing" />
+
+    <ImageView
+        android:id="@+id/imageViewMunicipality"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:contentDescription="@string/content_description_municipality_photo"
+        android:scaleType="centerCrop"
+        android:src="@drawable/beijing" />
+
+    <ScrollView
+        android:id="@+id/scrollViewMunicipalityInfo"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <TextView
+            android:id="@+id/textViewMunicipalityInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="5dp"
+            android:padding="24dp"
+            android:textColor="@color/color_text_dark"
+            android:textSize="16sp"
+            tools:text="Beijing is the capital of the People's Republic of China..." />
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/buttonVisitSite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:paddingTop="14dp"
+        android:paddingBottom="14dp"
+        android:text="@string/button_visit_site"
+        android:textAllCaps="false"
+        android:textColor="@color/color_text_light"
+        android:textSize="16sp"
+        app:backgroundTint="@color/municipality_beijing" />
+
+</LinearLayout>
