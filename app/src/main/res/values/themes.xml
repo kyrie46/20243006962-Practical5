@@ -2,6 +2,12 @@
 <resources>
 
     <style name="Theme.PracticalFive" parent="Theme.Material3.Light.NoActionBar">
+        <!-- The palette comes from the named colour resources in colors.xml. -->
+        <item name="colorPrimary">@color/municipality_beijing</item>
+        <item name="colorSecondary">@color/municipality_shanghai</item>
+        <item name="android:statusBarColor">@color/color_default_background</item>
+        <item name="android:navigationBarColor">@color/color_default_background</item>
+        <item name="android:windowBackground">@color/color_default_background</item>
         <item name="android:windowLightStatusBar">true</item>
     </style>
 

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Summaries are stored in the order Beijing, Shanghai, Chongqing, Tianjin.
+         Municipality.java relies on this order when it looks up the text that
+         belongs to the selected municipality. -->
+    <string-array name="municipalities_array">
+        <item>Beijing is the capital of the People\'s Republic of China and the country\'s political, cultural and diplomatic centre. It lies in northern China, and its sixteen districts are home to more than twenty-one million people. The city is famous for imperial landmarks such as the Forbidden City and the Temple of Heaven, and for the Great Wall sections that run through its northern hills. Beijing hosted the Summer Olympics in 2008 and, uniquely, the Winter Olympics in 2022. Today it is a major centre for education, research, technology and government, while its hutongs still preserve a traditional style of neighbourhood life.</item>
+        <item>Shanghai is China\'s largest city by urban population and its leading commercial and financial centre. It sits on the Yangtze River Delta, where the Huangpu River divides the historic Puxi district from the modern Pudong skyline. Lujiazui in Pudong is home to the Shanghai Stock Exchange and many international banks, while the Bund preserves grand colonial-era buildings along the waterfront. The port of Shanghai handles more containers than any other port in the world. The city also has a strong cultural and sporting profile, having hosted the 2010 World Expo, and it remains a gateway for foreign trade and investment.</item>
+        <item>Chongqing is a direct-administered municipality in south-western China. It became a municipality in 1997 and is the largest by land area, covering rugged hills and river valleys around the junction of the Yangtze and Jialing rivers. The city is a major industrial base for automobiles, electronics and machinery, and it is an important transport hub along the Yangtze. Visitors know it for its dramatic night skyline, steep streets and spicy hotpot cuisine. During the Second World War it served as China\'s wartime capital, and today it combines rapid urban growth with the wider rural areas under its administration.</item>
+        <item>Tianjin is a direct-administered municipality on the coast of northern China, opening onto the Bohai Sea. It is one of the country\'s oldest and busiest ports and a major industrial and shipping centre, closely connected to Beijing by high-speed rail. The city grew through foreign concessions in the nineteenth century, and the Five Great Avenues district still shows a wide range of European-style architecture. Tianjin also hosts a large new area at Binhai, home to port facilities and advanced manufacturing. Its cultural life includes traditional crosstalk comedy, and the city has invested heavily in education and research.</item>
+    </string-array>
+
+</resources>

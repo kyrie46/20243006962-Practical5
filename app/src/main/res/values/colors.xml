@@ -1,0 +1,15 @@
+<resources>
+    <!-- Official colour for each municipality. Named resources are used
+         throughout the app instead of repeating hexadecimal values. -->
+    <color name="municipality_beijing">#D32F2F</color>
+    <color name="municipality_shanghai">#C2185B</color>
+    <color name="municipality_tianjin">#36454F</color>
+    <color name="municipality_chongqing">#FF8C00</color>
+
+    <!-- Shared text colours chosen for contrast on light and dark backgrounds. -->
+    <color name="color_text_light">#FFFFFF</color>
+    <color name="color_text_dark">#1B1B1B</color>
+
+    <!-- Neutral background used by both screens. -->
+    <color name="color_default_background">#F4F5F7</color>
+</resources>
