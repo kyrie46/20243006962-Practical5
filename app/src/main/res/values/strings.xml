@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Chinese Municipalities</string>
+
+    <!-- Main screen -->
+    <string name="main_subtitle">Explore the four municipalities that are administered directly by the central government of China.</string>
+    <string name="main_input_label">Municipality name</string>
+    <string name="main_input_hint">e.g. Beijing, Shanghai, Chongqing or Tianjin</string>
+    <string name="main_input_helper">Press Enter or the Go key on the keyboard to open the information screen.</string>
+    <string name="content_description_map">Map of China highlighting Beijing, Tianjin, Chongqing and Shanghai</string>
 </resources>
