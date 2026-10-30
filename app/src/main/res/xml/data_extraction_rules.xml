@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data-extraction-rules>
+    <cloud-backup>
+        <!-- No app data needs to be backed up for this practical. -->
+    </cloud-backup>
+    <device-transfer>
+        <!-- No app data needs to be transferred for this practical. -->
+    </device-transfer>
+</data-extraction-rules>
