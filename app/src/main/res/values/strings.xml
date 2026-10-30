@@ -7,4 +7,8 @@
     <string name="main_input_hint">e.g. Beijing, Shanghai, Chongqing or Tianjin</string>
     <string name="main_input_helper">Press Enter or the Go key on the keyboard to open the information screen.</string>
     <string name="content_description_map">Map of China highlighting Beijing, Tianjin, Chongqing and Shanghai</string>
+
+    <!-- Input validation -->
+    <string name="error_empty_input">Please enter a municipality name.</string>
+    <string name="error_invalid_municipality">That municipality is not supported. Enter Beijing, Shanghai, Chongqing or Tianjin.</string>
 </resources>
